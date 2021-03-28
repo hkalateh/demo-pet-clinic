@@ -1,6 +1,7 @@
 package ir.kalateh.demopetclinic.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,8 +14,9 @@ import javax.validation.constraints.NotEmpty;
 import java.util.HashSet;
 import java.util.Set;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-@Entity
+/*@Entity*/
 public class Owner extends Person {
 
     @NotEmpty

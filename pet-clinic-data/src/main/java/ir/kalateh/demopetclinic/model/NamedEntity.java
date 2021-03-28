@@ -9,7 +9,7 @@ import javax.persistence.MappedSuperclass;
 @Getter
 @Setter
 @ToString
-@MappedSuperclass
+/*@MappedSuperclass*/
 public class NamedEntity extends BaseEntity {
 
     public String name;

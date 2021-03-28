@@ -1,5 +1,7 @@
 package ir.kalateh.demopetclinic.model;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,9 +10,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.util.Date;
 
-@Getter
-@Setter
-@Entity
+@EqualsAndHashCode(callSuper = true)
+@Data
+/*@Entity*/
 public class Pet extends NamedEntity {
 
     @ManyToOne

@@ -1,0 +1,10 @@
+${AnsiColor.WHITE}88        88                                                 88                                              ${AnsiColor.RED} 8b        d8  ${AnsiColor.BRIGHT_YELLOW}888888888888   ad888888b,
+${AnsiColor.WHITE}88        88                                                 ""                                              ${AnsiColor.RED}  Y8,    ,8P   ${AnsiColor.BRIGHT_YELLOW}        ,8P'  d8"     "88
+${AnsiColor.WHITE}88        88                                                                                                 ${AnsiColor.RED}   `8b  d8'    ${AnsiColor.BRIGHT_YELLOW}       d8"            a8P
+${AnsiColor.WHITE}88aaaaaaaa88   ,adPPYba,   ,adPPYba,  ,adPPYba,   ,adPPYba,  88  8b,dPPYba,   ,adPPYYba,  88,dPYba,,adPYba,  ${AnsiColor.RED}     Y88P      ${AnsiColor.BRIGHT_YELLOW}     ,8P'          ,d8P"
+${AnsiColor.WHITE}88""""""""88  a8"     "8a  I8[    ""  I8[    ""  a8P_____88  88  88P'   `"8a  ""     `Y8  88P'   "88"    "8a ${AnsiColor.RED}     d88b      ${AnsiColor.BRIGHT_YELLOW}    d8"          a8P"
+${AnsiColor.WHITE}88        88  8b       d8   `"Y8ba,    `"Y8ba,   8PP"""""""  88  88       88  ,adPPPPP88  88      88      88 ${AnsiColor.RED}   ,8P  Y8,    ${AnsiColor.BRIGHT_YELLOW}  ,8P'         a8P'
+${AnsiColor.WHITE}88        88  "8a,   ,a8"  aa    ]8I  aa    ]8I  "8b,   ,aa  88  88       88  88,    ,88  88      88      88 ${AnsiColor.RED}  d8'    `8b   ${AnsiColor.BRIGHT_YELLOW} d8"          d8"
+${AnsiColor.WHITE}88        88   `"YbbdP"'   `"YbbdP"'  `"YbbdP"'   `"Ybbd8"'  88  88       88  `"8bbdP"Y8  88      88      88 ${AnsiColor.RED} 8P        Y8  ${AnsiColor.BRIGHT_YELLOW}8P'           88888888888
+
+

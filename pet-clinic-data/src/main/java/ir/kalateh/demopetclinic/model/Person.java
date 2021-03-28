@@ -9,7 +9,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Getter
 @Setter
-@MappedSuperclass
+/*@MappedSuperclass*/
 public class Person extends BaseEntity {
     
     @Column(name = "first_name")
