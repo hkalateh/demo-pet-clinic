@@ -4,8 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -13,9 +13,11 @@ import javax.validation.constraints.NotEmpty;
 public class Person extends BaseEntity {
     
     @Column(name = "first_name")
+    @NotNull
     @NotEmpty
     private String firstName;
     @Column(name = "last_name")
+    @NotNull
     @NotEmpty
     private String lastName;
 }

@@ -2,15 +2,12 @@ package ir.kalateh.demopetclinic.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,11 +16,14 @@ import java.util.Set;
 /*@Entity*/
 public class Owner extends Person {
 
+    @NotNull
     @NotEmpty
     private String address;
+    @NotNull
     @NotEmpty
     private String city;
-    @Digits(fraction = 0,integer = 10)
+    @NotNull
+    @Digits(fraction = 0,integer = 11)
     @NotEmpty
     private String telephone;
     

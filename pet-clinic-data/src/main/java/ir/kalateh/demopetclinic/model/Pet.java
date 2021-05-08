@@ -2,10 +2,8 @@ package ir.kalateh.demopetclinic.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
-import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.util.Date;
@@ -15,12 +13,13 @@ import java.util.Date;
 /*@Entity*/
 public class Pet extends NamedEntity {
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "type-id")
     private PetType type;
     private Date birthDate;
     
     @ManyToOne
+    @JoinColumn(name = "owner-id")
     private Owner owner;
     
 }
