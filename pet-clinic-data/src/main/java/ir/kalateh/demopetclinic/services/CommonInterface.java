@@ -8,7 +8,7 @@ public interface CommonInterface<T,ID> {
 
     T findById(ID id);
 
-    T save(T object);
+    T save(ID id, T object);
 
     Set<T> findAll();
 
