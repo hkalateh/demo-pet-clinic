@@ -4,13 +4,6 @@ import ir.kalateh.demopetclinic.model.Pet;
 
 import java.util.Set;
 
-public interface PetService {
-    
-    PetService findById(Long id);
-    
-    Pet save(Pet pet);
-    
-    Set<Pet> findAll();
-    
-    void delete(Pet pet);
+public interface PetService extends CommonInterface<Pet,Long> {
+
 }
