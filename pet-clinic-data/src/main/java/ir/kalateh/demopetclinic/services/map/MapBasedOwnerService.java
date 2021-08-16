@@ -1,11 +1,11 @@
 package ir.kalateh.demopetclinic.services.map;
 
 import ir.kalateh.demopetclinic.model.Owner;
-import ir.kalateh.demopetclinic.services.CommonInterface;
+import ir.kalateh.demopetclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class MapBasedOwnerService extends AbstractMapService<Owner, Long> implements CommonInterface<Owner, Long> {
+public class MapBasedOwnerService extends AbstractMapService<Owner, Long> implements OwnerService {
     
     @Override
     public Owner findById(Long id) {
@@ -30,5 +30,15 @@ public class MapBasedOwnerService extends AbstractMapService<Owner, Long> implem
     @Override
     public void delete(Owner object) {
         super.delete(object);
+    }
+    
+    @Override
+    public Owner findByName(String name) {
+        return null;
+    }
+    
+    @Override
+    public Owner findByNameAndLastName(String name, String family) {
+        return null;
     }
 }

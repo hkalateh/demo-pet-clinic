@@ -1,11 +1,11 @@
 package ir.kalateh.demopetclinic.services.map;
 
 import ir.kalateh.demopetclinic.model.Pet;
-import ir.kalateh.demopetclinic.services.CommonInterface;
+import ir.kalateh.demopetclinic.services.PetService;
 
 import java.util.Set;
 
-public class MapBasedPetService extends AbstractMapService<Pet, Long> implements CommonInterface<Pet, Long> {
+public class MapBasedPetService extends AbstractMapService<Pet, Long> implements PetService {
     
     @Override
     public Pet findById(Long id) {

@@ -1,11 +1,11 @@
 package ir.kalateh.demopetclinic.services.map;
 
 import ir.kalateh.demopetclinic.model.Vet;
-import ir.kalateh.demopetclinic.services.CommonInterface;
+import ir.kalateh.demopetclinic.services.VetService;
 
 import java.util.Set;
 
-public class MapBasedVetService extends AbstractMapService<Vet, Long> implements CommonInterface<Vet, Long> {
+public class MapBasedVetService extends AbstractMapService<Vet, Long> implements VetService {
     
     @Override
     public Vet findById(Long id) {
@@ -30,5 +30,10 @@ public class MapBasedVetService extends AbstractMapService<Vet, Long> implements
     @Override
     public void delete(Vet object) {
         super.delete(object);
+    }
+    
+    @Override
+    public Vet findByName(String name) {
+        return null;
     }
 }

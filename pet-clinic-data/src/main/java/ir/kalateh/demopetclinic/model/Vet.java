@@ -1,6 +1,5 @@
 package ir.kalateh.demopetclinic.model;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
