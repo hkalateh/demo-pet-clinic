@@ -2,9 +2,11 @@ package ir.kalateh.demopetclinic.services.map;
 
 import ir.kalateh.demopetclinic.model.Vet;
 import ir.kalateh.demopetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class MapBasedVetService extends AbstractMapService<Vet, Long> implements VetService {
     
     @Override

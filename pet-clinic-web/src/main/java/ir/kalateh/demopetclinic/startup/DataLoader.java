@@ -4,20 +4,18 @@ import ir.kalateh.demopetclinic.model.Owner;
 import ir.kalateh.demopetclinic.model.Vet;
 import ir.kalateh.demopetclinic.services.OwnerService;
 import ir.kalateh.demopetclinic.services.VetService;
-import ir.kalateh.demopetclinic.services.map.MapBasedOwnerService;
-import ir.kalateh.demopetclinic.services.map.MapBasedVetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class DataLoader implements CommandLineRunner {
     
-    private VetService vetService;
-    private OwnerService ownerService;
+    private final VetService vetService;
+    private final OwnerService ownerService;
     
-    public DataLoader() {
-        vetService = new MapBasedVetService();
-        ownerService = new MapBasedOwnerService();
+    public DataLoader(VetService vetService, OwnerService ownerService) {
+        this.vetService = vetService;
+        this.ownerService = ownerService;
     }
     
     @Override
