@@ -14,7 +14,7 @@ import java.util.Date;
 public class Pet extends BaseEntity {
     @ManyToOne
     private Owner owner;
-    @OneToOne
+    @ManyToOne
     private PetType petType;
     private Date birthDate;
 }
