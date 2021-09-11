@@ -1,11 +1,15 @@
 package ir.kalateh.demopetclinic.startup;
 
 import ir.kalateh.demopetclinic.model.Owner;
+import ir.kalateh.demopetclinic.model.Speciality;
 import ir.kalateh.demopetclinic.model.Vet;
 import ir.kalateh.demopetclinic.services.OwnerService;
 import ir.kalateh.demopetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -36,7 +40,13 @@ public class DataLoader implements CommandLineRunner {
         System.out.println("owners loaded....");
         System.out.println((long) ownerService.findAll().size());
     
+        Speciality speciality = new Speciality();
+        speciality.setDescription("ghalb");
+    
         Vet vet = new Vet();
+        Set<Speciality> specialities = new HashSet<>();
+        specialities.add(speciality);
+        vet.setSpecialities(specialities);
         vet.setFirstName("hasan");
         vet.setLastName("mirzayi");
         
@@ -50,5 +60,7 @@ public class DataLoader implements CommandLineRunner {
     
         System.out.println("vets loaded...");
         System.out.println((long) vetService.findAll().size());
+    
+        System.out.println(vet.getSpecialities().size());
     }
 }
