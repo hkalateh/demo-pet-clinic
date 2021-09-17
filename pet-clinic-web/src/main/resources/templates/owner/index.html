@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
 <head>
     <meta charset="UTF-8">
     <title>owner page</title>
 </head>
 <body>
-    <h1 th:text="'owner page'">owner page</h1>
+    <h2 th:text="'owner page'">owner page</h2>
 
-    <table>
+    <table class="table table-striped">
        <thead>
        <tr>
-           <td>id</td>
-           <td>name</td>
-           <td>family</td>
+           <th style="width: 150px;">id</th>
+           <th style="width: 150px;">name</td>
+           <th style="width: 150px;">family</td>
        </tr>
        </thead>
         <tbody>
         <tr th:each="owner : ${owners}">
-            <td style="border: 1px solid black;" th:text="${owner.id}">1</td>
-            <td style="border: 1px solid black;" th:text="${owner.firstName}">hosseinam</td>
-            <td style="border: 1px solid black;" th:text="${owner.lastName}">hosseinam</td>
+            <td th:text="${owner.id}">1</td>
+            <td th:text="${owner.firstName}">hosseinam</td>
+            <td th:text="${owner.lastName}">hosseinam</td>
         </tr>
         </tbody>
     </table>
