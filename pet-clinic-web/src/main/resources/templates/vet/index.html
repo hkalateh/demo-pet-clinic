@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'vets')}">
 <head>
     <meta charset="UTF-8">
     <title>vet page</title>
 </head>
 <body>
-    <h1 th:text="'vet page'">vet page</h1>
-    <table style="border: 1px solid black;">
+    <h2 th:text="'vet page'">vet page</h2>
+    <table class="table table-striped">
         <thead>
         <tr>
-            <td>id</td>
-            <td>name</td>
-            <td>family</td>
+            <th>id</th>
+            <th>name</th>
+            <th>family</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="vet : ${vets}">
-            <td style="border: 1px solid black;" th:text="${vet.id}">1</td>
-            <td style="border: 1px solid black;" th:text="${vet.firstName}">hosseinam</td>
-            <td style="border: 1px solid black;" th:text="${vet.lastName}">hosseinam</td>
+            <td th:text="${vet.id}">1</td>
+            <td th:text="${vet.firstName}">hosseinam</td>
+            <td th:text="${vet.lastName}">hosseinam</td>
         </tr>
         </tbody>
     </table>
