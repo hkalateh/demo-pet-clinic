@@ -1,15 +1,14 @@
 package ir.kalateh.demopetclinic.startup;
 
-import ir.kalateh.demopetclinic.model.Owner;
-import ir.kalateh.demopetclinic.model.PetType;
-import ir.kalateh.demopetclinic.model.Speciality;
-import ir.kalateh.demopetclinic.model.Vet;
+import ir.kalateh.demopetclinic.model.*;
 import ir.kalateh.demopetclinic.services.OwnerService;
+import ir.kalateh.demopetclinic.services.PetService;
 import ir.kalateh.demopetclinic.services.PetTypeService;
 import ir.kalateh.demopetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,11 +16,13 @@ import java.util.Set;
 public class DataLoader implements CommandLineRunner {
     
     private final VetService vetService;
+    private final PetService petService;
     private final OwnerService ownerService;
     private final PetTypeService petTypeService;
     
-    public DataLoader(VetService vetService, OwnerService ownerService, PetTypeService petTypeService) {
+    public DataLoader(VetService vetService, PetService petService, OwnerService ownerService, PetTypeService petTypeService) {
         this.vetService = vetService;
+        this.petService = petService;
         this.ownerService = ownerService;
         this.petTypeService = petTypeService;
     }
@@ -42,12 +43,30 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("salman");
         owner1.setLastName("basmechi");
+        owner1.setCity("isfahan");
+        owner1.setAddress("sq.imam");
+        owner1.setTelephone("09123456789");
+    
+        Pet jimi = new Pet();
+        jimi.setBirthDate(new Date());
+        jimi.setOwner(owner1);
+        jimi.setPetType(savedCatPetType);
+        owner1.getPets().add(jimi);
+    
+        Pet gabby = new Pet();
+        gabby.setBirthDate(new Date());
+        gabby.setOwner(owner1);
+        gabby.setPetType(savedDogPetType);
+        owner1.getPets().add(gabby);
         
         ownerService.save(owner1);
         
         Owner owner = new Owner();
         owner.setFirstName("hossein");
         owner.setLastName("kalateh");
+        owner.setTelephone("09123456789");
+        owner.setAddress("sq.imam");
+        owner.setCity("tehran");
         
         ownerService.save(owner);
         
