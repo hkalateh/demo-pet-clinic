@@ -12,8 +12,8 @@ import java.util.Set;
 @Setter
 public class Speciality extends BaseEntity {
     
-    @ManyToMany(mappedBy = "specialities")
-    private Set<Vet> vets;
+    /*@ManyToMany(mappedBy = "specialities")
+    private Set<Vet> vets;*/
     
     private String description;
 }
