@@ -1,22 +1,26 @@
 package ir.kalateh.demopetclinic.services.map;
 
 import ir.kalateh.demopetclinic.model.BaseEntity;
+import ir.kalateh.demopetclinic.services.CommonInterface;
 
 import java.util.*;
 
-public abstract class AbstractMapService<T extends BaseEntity, ID> {
+public abstract class AbstractMapService<T extends BaseEntity, ID> implements CommonInterface<T, ID> {
     
     protected Map<Long, T> map = new HashMap<>();
-    
-    T findById(ID id) {
+
+    @Override
+    public T findById(ID id) {
         return map.get(id);
     }
-    
-    Set<T> findAll() {
+
+    @Override
+    public Set<T> findAll() {
         return new HashSet<>(map.values());
     }
-    
-    T save(T object){
+
+    @Override
+    public T save(T object){
         
         if(object != null) {
             if(object.getId() == null){
@@ -29,12 +33,14 @@ public abstract class AbstractMapService<T extends BaseEntity, ID> {
         }
         return object;
     }
-    
-    void deleteById(ID id) {
+
+    @Override
+    public void deleteById(ID id) {
         map.remove(id);
     }
-    
-    void delete(T object) {
+
+    @Override
+    public void delete(T object) {
         map.entrySet().removeIf(t -> t.getValue().equals(object));
     }
     
